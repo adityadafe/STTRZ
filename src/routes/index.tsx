@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useIndexStore } from "../store";
+import { Button } from "@/components/ui/button";
 
 function HomePage() {
   const { count, increaseCount } = useIndexStore((state) => ({
@@ -10,7 +11,9 @@ function HomePage() {
     <div className="text-white">
       this is {count}
       <br />
-      <button onClick={increaseCount}>Increase</button>
+      <Button onClick={increaseCount} variant="default">
+        Increase
+      </Button>
     </div>
   );
 }

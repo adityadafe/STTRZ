@@ -2,6 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 169 48% 100%;
+    --foreground: 169 59% 1%;
+    --muted: 139 37% 88%;
+    --muted-foreground: 139 5% 33%;
+    --popover: 169 48% 100%;
+    --popover-foreground: 169 59% 1%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 0%;
+    --border: 169 14% 95%;
+    --input: 169 14% 95%;
+    --primary: 169 89% 60%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 139 89% 60%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 7 95% 30%;
+    --destructive-foreground: 7 95% 90%;
+    --ring: 169 89% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 169 56% 2%;
+    --foreground: 169 11% 98%;
+    --muted: 139 37% 12%;
+    --muted-foreground: 139 5% 67%;
+    --popover: 169 56% 2%;
+    --popover-foreground: 169 11% 98%;
+    --card: 169 56% 3%;
+    --card-foreground: 169 11% 99%;
+    --border: 169 14% 12%;
+    --input: 169 14% 12%;
+    --primary: 169 89% 60%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 139 89% 60%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 7 95% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 169 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 body {
   @apply bg-zinc-900;
 }
+
